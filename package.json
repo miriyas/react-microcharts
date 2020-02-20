@@ -1,7 +1,7 @@
 {
-  "name": "react-sparklines",
+  "name": "react-microcharts",
   "version": "1.7.0",
-  "description": "Beautiful and expressive Sparklines component for React ",
+  "description": "Simple and Lightweight Sparklines component for React",
   "main": "build/index.js",
   "directories": {
     "src": "src/"
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/borisyankov/react-sparklines.git"
+    "url": "git+https://github.com/miriyas/react-microcharts.git"
   },
   "keywords": [
     "react",
@@ -24,15 +24,16 @@
     "react-component",
     "charts",
     "sparklines",
+    "microcharts",
     "visualization",
     "jsx"
   ],
-  "author": "Boris Yankov <borisyankov@gmail.com> (https://github.com/borisyankov)",
+  "author": "Miriya Lee <miriya.lee@gmail.com> (https://github.com/miriyas)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/borisyankov/react-sparklines/issues"
+    "url": "https://github.com/miriyas/react-microcharts/issues"
   },
-  "homepage": "https://github.com/borisyankov/react-sparklines#readme",
+  "homepage": "https://github.com/miriyas/react-microcharts#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.8.0",

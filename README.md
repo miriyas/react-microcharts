@@ -1,15 +1,15 @@
-# Beautiful and expressive sparklines component for React
+# Simple and Lightweight Sparklines component for React
 
-[![Build Status](https://travis-ci.org/borisyankov/react-sparklines.svg?branch=master)](https://travis-ci.org/borisyankov/react-sparklines)
+forked from https://github.com/borisyankov/react-sparklines
 
-Live demos and docs: [borisyankov.github.io/react-sparklines/](http://borisyankov.github.io/react-sparklines/)
+Live demos and docs: [miriyas.github.io/react-sparklines/](https://miriyas.github.io/react-microcharts/)
 
-![](http://borisyankov.github.io/react-sparklines/img/dynamic.gif)
+![](https://miriyas.github.io/react-microcharts/img/dynamic.gif)
 
 ## Install
 
 ```
-npm install react-sparklines --save
+npm install react-microcharts --save
 ```
 
 ## Run demo
@@ -25,14 +25,13 @@ http://localhost:8080
 
 Import the Sparklines components that you need; for example to generate a simple chart:
 
-![](http://borisyankov.github.io/react-sparklines/img/basic.png)
+![](https://miriyas.github.io/react-microcharts/img/basic.png)
 
 ```
 import React from 'react';
-import { Sparklines } from 'react-sparklines';
+import { Sparklines } from 'react-microcharts';
 ...
-<Sparklines data={[5, 10, 5, 20, 8, 15]} limit={5} width={100} height={20} margin={5}>
-</Sparklines>
+<Sparklines data={[5, 10, 5, 20, 8, 15]} limit={5} width={100} height={20} margin={5} />
 ```
 
 Sparklines component is a container with the following properties:
@@ -45,7 +44,7 @@ width, height - dimensions of the generated sparkline in the SVG viewbox.  This 
 
 svgWidth, svgHeight - If you want absolute dimensions instead of a responsive component set these attributes.
 
-[preserveAspectRatio](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) - default: 'none', set this to modify how the sparkline should scale 
+[preserveAspectRatio](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio) - default: 'none', set this to modify how the sparkline should scale
 
 margin - optional, offset the chart
 
@@ -54,7 +53,7 @@ min, max - optional, bound the chart
 
 #### Basic Sparkline
 
-![](http://borisyankov.github.io/react-sparklines/img/customizable.png)
+![](https://miriyas.github.io/react-microcharts/img/customizable.png)
 
 ```
 import React from 'react';
@@ -67,7 +66,7 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 #### Bars
 
-![](http://borisyankov.github.io/react-sparklines/img/bars.png)
+![](https://miriyas.github.io/react-microcharts/img/bars.png)
 
 
 ```
@@ -81,7 +80,7 @@ import { Sparklines, SparklinesBars } from 'react-sparklines';
 
 #### Spots
 
-![](http://borisyankov.github.io/react-sparklines/img/spots.png)
+![](https://miriyas.github.io/react-microcharts/img/spots.png)
 
 
 ```
@@ -96,7 +95,7 @@ import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
 
 #### Reference Line
 
-![](http://borisyankov.github.io/react-sparklines/img/referenceline.png)
+![](https://miriyas.github.io/react-microcharts/img/referenceline.png)
 
 
 ```
@@ -111,7 +110,7 @@ import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-spark
 
 #### Normal Band
 
-![](http://borisyankov.github.io/react-sparklines/img/normalband.png)
+![](https://miriyas.github.io/react-microcharts/img/normalband.png)
 
 
 ```
