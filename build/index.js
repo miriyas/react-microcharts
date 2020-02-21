@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define(["react"], factory);
 	else if(typeof exports === 'object')
-		exports["ReactSparklines"] = factory(require("react"));
+		exports["ReactMicrocharts"] = factory(require("react"));
 	else
-		root["ReactSparklines"] = factory(root["React"]);
+		root["ReactMicrocharts"] = factory(root["React"]);
 })(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_1__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -428,7 +428,7 @@ module.exports = __webpack_require__(11);
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.SparklinesText = exports.SparklinesNormalBand = exports.SparklinesReferenceLine = exports.SparklinesSpots = exports.SparklinesBars = exports.SparklinesCurve = exports.SparklinesLine = exports.Sparklines = undefined;
+exports.MicrochartsText = exports.MicrochartsNormalBand = exports.MicrochartsReferenceLine = exports.MicrochartsSpots = exports.MicrochartsBars = exports.MicrochartsCurve = exports.MicrochartsLine = exports.Microcharts = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -440,33 +440,33 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _SparklinesText = __webpack_require__(18);
+var _MicrochartsText = __webpack_require__(18);
 
-var _SparklinesText2 = _interopRequireDefault(_SparklinesText);
+var _MicrochartsText2 = _interopRequireDefault(_MicrochartsText);
 
-var _SparklinesLine = __webpack_require__(19);
+var _MicrochartsLine = __webpack_require__(19);
 
-var _SparklinesLine2 = _interopRequireDefault(_SparklinesLine);
+var _MicrochartsLine2 = _interopRequireDefault(_MicrochartsLine);
 
-var _SparklinesCurve = __webpack_require__(20);
+var _MicrochartsCurve = __webpack_require__(20);
 
-var _SparklinesCurve2 = _interopRequireDefault(_SparklinesCurve);
+var _MicrochartsCurve2 = _interopRequireDefault(_MicrochartsCurve);
 
-var _SparklinesBars = __webpack_require__(21);
+var _MicrochartsBars = __webpack_require__(21);
 
-var _SparklinesBars2 = _interopRequireDefault(_SparklinesBars);
+var _MicrochartsBars2 = _interopRequireDefault(_MicrochartsBars);
 
-var _SparklinesSpots = __webpack_require__(22);
+var _MicrochartsSpots = __webpack_require__(22);
 
-var _SparklinesSpots2 = _interopRequireDefault(_SparklinesSpots);
+var _MicrochartsSpots2 = _interopRequireDefault(_MicrochartsSpots);
 
-var _SparklinesReferenceLine = __webpack_require__(23);
+var _MicrochartsReferenceLine = __webpack_require__(23);
 
-var _SparklinesReferenceLine2 = _interopRequireDefault(_SparklinesReferenceLine);
+var _MicrochartsReferenceLine2 = _interopRequireDefault(_MicrochartsReferenceLine);
 
-var _SparklinesNormalBand = __webpack_require__(28);
+var _MicrochartsNormalBand = __webpack_require__(28);
 
-var _SparklinesNormalBand2 = _interopRequireDefault(_SparklinesNormalBand);
+var _MicrochartsNormalBand2 = _interopRequireDefault(_MicrochartsNormalBand);
 
 var _dataToPoints = __webpack_require__(29);
 
@@ -480,16 +480,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Sparklines = function (_PureComponent) {
-    _inherits(Sparklines, _PureComponent);
+var Microcharts = function (_PureComponent) {
+    _inherits(Microcharts, _PureComponent);
 
-    function Sparklines(props) {
-        _classCallCheck(this, Sparklines);
+    function Microcharts(props) {
+        _classCallCheck(this, Microcharts);
 
-        return _possibleConstructorReturn(this, (Sparklines.__proto__ || Object.getPrototypeOf(Sparklines)).call(this, props));
+        return _possibleConstructorReturn(this, (Microcharts.__proto__ || Object.getPrototypeOf(Microcharts)).call(this, props));
     }
 
-    _createClass(Sparklines, [{
+    _createClass(Microcharts, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -524,10 +524,10 @@ var Sparklines = function (_PureComponent) {
         }
     }]);
 
-    return Sparklines;
+    return Microcharts;
 }(_react.PureComponent);
 
-Sparklines.propTypes = {
+Microcharts.propTypes = {
     data: _propTypes2.default.array,
     limit: _propTypes2.default.number,
     width: _propTypes2.default.number,
@@ -541,7 +541,7 @@ Sparklines.propTypes = {
     max: _propTypes2.default.number,
     onMouseMove: _propTypes2.default.func
 };
-Sparklines.defaultProps = {
+Microcharts.defaultProps = {
     data: [],
     width: 240,
     height: 60,
@@ -549,14 +549,14 @@ Sparklines.defaultProps = {
     preserveAspectRatio: 'none', //https://www.w3.org/TR/SVG/coords.html#PreserveAspectRatioAttribute
     margin: 2
 };
-exports.Sparklines = Sparklines;
-exports.SparklinesLine = _SparklinesLine2.default;
-exports.SparklinesCurve = _SparklinesCurve2.default;
-exports.SparklinesBars = _SparklinesBars2.default;
-exports.SparklinesSpots = _SparklinesSpots2.default;
-exports.SparklinesReferenceLine = _SparklinesReferenceLine2.default;
-exports.SparklinesNormalBand = _SparklinesNormalBand2.default;
-exports.SparklinesText = _SparklinesText2.default;
+exports.Microcharts = Microcharts;
+exports.MicrochartsLine = _MicrochartsLine2.default;
+exports.MicrochartsCurve = _MicrochartsCurve2.default;
+exports.MicrochartsBars = _MicrochartsBars2.default;
+exports.MicrochartsSpots = _MicrochartsSpots2.default;
+exports.MicrochartsReferenceLine = _MicrochartsReferenceLine2.default;
+exports.MicrochartsNormalBand = _MicrochartsNormalBand2.default;
+exports.MicrochartsText = _MicrochartsText2.default;
 
 /***/ }),
 /* 12 */
@@ -1730,16 +1730,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesText = function (_React$Component) {
-    _inherits(SparklinesText, _React$Component);
+var MicrochartsText = function (_React$Component) {
+    _inherits(MicrochartsText, _React$Component);
 
-    function SparklinesText() {
-        _classCallCheck(this, SparklinesText);
+    function MicrochartsText() {
+        _classCallCheck(this, MicrochartsText);
 
-        return _possibleConstructorReturn(this, (SparklinesText.__proto__ || Object.getPrototypeOf(SparklinesText)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MicrochartsText.__proto__ || Object.getPrototypeOf(MicrochartsText)).apply(this, arguments));
     }
 
-    _createClass(SparklinesText, [{
+    _createClass(MicrochartsText, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -1762,20 +1762,20 @@ var SparklinesText = function (_React$Component) {
         }
     }]);
 
-    return SparklinesText;
+    return MicrochartsText;
 }(_react2.default.Component);
 
-SparklinesText.propTypes = {
+MicrochartsText.propTypes = {
     text: _propTypes2.default.string,
     point: _propTypes2.default.object,
     fontSize: _propTypes2.default.number,
     fontFamily: _propTypes2.default.string
 };
-SparklinesText.defaultProps = {
+MicrochartsText.defaultProps = {
     text: '',
     point: { x: 0, y: 0 }
 };
-exports.default = SparklinesText;
+exports.default = MicrochartsText;
 
 /***/ }),
 /* 19 */
@@ -1806,16 +1806,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesLine = function (_React$Component) {
-  _inherits(SparklinesLine, _React$Component);
+var MicrochartsLine = function (_React$Component) {
+  _inherits(MicrochartsLine, _React$Component);
 
-  function SparklinesLine() {
-    _classCallCheck(this, SparklinesLine);
+  function MicrochartsLine() {
+    _classCallCheck(this, MicrochartsLine);
 
-    return _possibleConstructorReturn(this, (SparklinesLine.__proto__ || Object.getPrototypeOf(SparklinesLine)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (MicrochartsLine.__proto__ || Object.getPrototypeOf(MicrochartsLine)).apply(this, arguments));
   }
 
-  _createClass(SparklinesLine, [{
+  _createClass(MicrochartsLine, [{
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -1880,18 +1880,18 @@ var SparklinesLine = function (_React$Component) {
     }
   }]);
 
-  return SparklinesLine;
+  return MicrochartsLine;
 }(_react2.default.Component);
 
-SparklinesLine.propTypes = {
+MicrochartsLine.propTypes = {
   color: _propTypes2.default.string,
   style: _propTypes2.default.object
 };
-SparklinesLine.defaultProps = {
+MicrochartsLine.defaultProps = {
   style: {},
   onMouseMove: function onMouseMove() {}
 };
-exports.default = SparklinesLine;
+exports.default = MicrochartsLine;
 
 /***/ }),
 /* 20 */
@@ -1922,16 +1922,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesCurve = function (_React$Component) {
-    _inherits(SparklinesCurve, _React$Component);
+var MicrochartsCurve = function (_React$Component) {
+    _inherits(MicrochartsCurve, _React$Component);
 
-    function SparklinesCurve() {
-        _classCallCheck(this, SparklinesCurve);
+    function MicrochartsCurve() {
+        _classCallCheck(this, MicrochartsCurve);
 
-        return _possibleConstructorReturn(this, (SparklinesCurve.__proto__ || Object.getPrototypeOf(SparklinesCurve)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MicrochartsCurve.__proto__ || Object.getPrototypeOf(MicrochartsCurve)).apply(this, arguments));
     }
 
-    _createClass(SparklinesCurve, [{
+    _createClass(MicrochartsCurve, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -1999,17 +1999,17 @@ var SparklinesCurve = function (_React$Component) {
         }
     }]);
 
-    return SparklinesCurve;
+    return MicrochartsCurve;
 }(_react2.default.Component);
 
-SparklinesCurve.propTypes = {
+MicrochartsCurve.propTypes = {
     color: _propTypes2.default.string,
     style: _propTypes2.default.object
 };
-SparklinesCurve.defaultProps = {
+MicrochartsCurve.defaultProps = {
     style: {}
 };
-exports.default = SparklinesCurve;
+exports.default = MicrochartsCurve;
 
 /***/ }),
 /* 21 */
@@ -2040,16 +2040,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesBars = function (_React$Component) {
-  _inherits(SparklinesBars, _React$Component);
+var MicrochartsBars = function (_React$Component) {
+  _inherits(MicrochartsBars, _React$Component);
 
-  function SparklinesBars() {
-    _classCallCheck(this, SparklinesBars);
+  function MicrochartsBars() {
+    _classCallCheck(this, MicrochartsBars);
 
-    return _possibleConstructorReturn(this, (SparklinesBars.__proto__ || Object.getPrototypeOf(SparklinesBars)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (MicrochartsBars.__proto__ || Object.getPrototypeOf(MicrochartsBars)).apply(this, arguments));
   }
 
-  _createClass(SparklinesBars, [{
+  _createClass(MicrochartsBars, [{
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -2084,10 +2084,10 @@ var SparklinesBars = function (_React$Component) {
     }
   }]);
 
-  return SparklinesBars;
+  return MicrochartsBars;
 }(_react2.default.Component);
 
-SparklinesBars.propTypes = {
+MicrochartsBars.propTypes = {
   points: _propTypes2.default.arrayOf(_propTypes2.default.object),
   height: _propTypes2.default.number,
   style: _propTypes2.default.object,
@@ -2095,10 +2095,10 @@ SparklinesBars.propTypes = {
   margin: _propTypes2.default.number,
   onMouseMove: _propTypes2.default.func
 };
-SparklinesBars.defaultProps = {
+MicrochartsBars.defaultProps = {
   style: { fill: 'slategray' }
 };
-exports.default = SparklinesBars;
+exports.default = MicrochartsBars;
 
 /***/ }),
 /* 22 */
@@ -2129,16 +2129,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesSpots = function (_React$Component) {
-    _inherits(SparklinesSpots, _React$Component);
+var MicrochartsSpots = function (_React$Component) {
+    _inherits(MicrochartsSpots, _React$Component);
 
-    function SparklinesSpots() {
-        _classCallCheck(this, SparklinesSpots);
+    function MicrochartsSpots() {
+        _classCallCheck(this, MicrochartsSpots);
 
-        return _possibleConstructorReturn(this, (SparklinesSpots.__proto__ || Object.getPrototypeOf(SparklinesSpots)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MicrochartsSpots.__proto__ || Object.getPrototypeOf(MicrochartsSpots)).apply(this, arguments));
     }
 
-    _createClass(SparklinesSpots, [{
+    _createClass(MicrochartsSpots, [{
         key: 'lastDirection',
         value: function lastDirection(points) {
 
@@ -2181,15 +2181,15 @@ var SparklinesSpots = function (_React$Component) {
         }
     }]);
 
-    return SparklinesSpots;
+    return MicrochartsSpots;
 }(_react2.default.Component);
 
-SparklinesSpots.propTypes = {
+MicrochartsSpots.propTypes = {
     size: _propTypes2.default.number,
     style: _propTypes2.default.object,
     spotColors: _propTypes2.default.object
 };
-SparklinesSpots.defaultProps = {
+MicrochartsSpots.defaultProps = {
     size: 2,
     spotColors: {
         '-1': 'red',
@@ -2197,7 +2197,7 @@ SparklinesSpots.defaultProps = {
         '1': 'green'
     }
 };
-exports.default = SparklinesSpots;
+exports.default = MicrochartsSpots;
 
 /***/ }),
 /* 23 */
@@ -2234,16 +2234,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesReferenceLine = function (_React$Component) {
-    _inherits(SparklinesReferenceLine, _React$Component);
+var MicrochartsReferenceLine = function (_React$Component) {
+    _inherits(MicrochartsReferenceLine, _React$Component);
 
-    function SparklinesReferenceLine() {
-        _classCallCheck(this, SparklinesReferenceLine);
+    function MicrochartsReferenceLine() {
+        _classCallCheck(this, MicrochartsReferenceLine);
 
-        return _possibleConstructorReturn(this, (SparklinesReferenceLine.__proto__ || Object.getPrototypeOf(SparklinesReferenceLine)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MicrochartsReferenceLine.__proto__ || Object.getPrototypeOf(MicrochartsReferenceLine)).apply(this, arguments));
     }
 
-    _createClass(SparklinesReferenceLine, [{
+    _createClass(MicrochartsReferenceLine, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -2266,19 +2266,19 @@ var SparklinesReferenceLine = function (_React$Component) {
         }
     }]);
 
-    return SparklinesReferenceLine;
+    return MicrochartsReferenceLine;
 }(_react2.default.Component);
 
-SparklinesReferenceLine.propTypes = {
+MicrochartsReferenceLine.propTypes = {
     type: _propTypes2.default.oneOf(['max', 'min', 'mean', 'avg', 'median', 'custom']),
     value: _propTypes2.default.number,
     style: _propTypes2.default.object
 };
-SparklinesReferenceLine.defaultProps = {
+MicrochartsReferenceLine.defaultProps = {
     type: 'mean',
     style: { stroke: 'red', strokeOpacity: .75, strokeDasharray: '2, 2' }
 };
-exports.default = SparklinesReferenceLine;
+exports.default = MicrochartsReferenceLine;
 
 /***/ }),
 /* 24 */
@@ -2431,16 +2431,16 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SparklinesNormalBand = function (_React$Component) {
-    _inherits(SparklinesNormalBand, _React$Component);
+var MicrochartsNormalBand = function (_React$Component) {
+    _inherits(MicrochartsNormalBand, _React$Component);
 
-    function SparklinesNormalBand() {
-        _classCallCheck(this, SparklinesNormalBand);
+    function MicrochartsNormalBand() {
+        _classCallCheck(this, MicrochartsNormalBand);
 
-        return _possibleConstructorReturn(this, (SparklinesNormalBand.__proto__ || Object.getPrototypeOf(SparklinesNormalBand)).apply(this, arguments));
+        return _possibleConstructorReturn(this, (MicrochartsNormalBand.__proto__ || Object.getPrototypeOf(MicrochartsNormalBand)).apply(this, arguments));
     }
 
-    _createClass(SparklinesNormalBand, [{
+    _createClass(MicrochartsNormalBand, [{
         key: 'render',
         value: function render() {
             var _props = this.props,
@@ -2461,16 +2461,16 @@ var SparklinesNormalBand = function (_React$Component) {
         }
     }]);
 
-    return SparklinesNormalBand;
+    return MicrochartsNormalBand;
 }(_react2.default.Component);
 
-SparklinesNormalBand.propTypes = {
+MicrochartsNormalBand.propTypes = {
     style: _propTypes2.default.object
 };
-SparklinesNormalBand.defaultProps = {
+MicrochartsNormalBand.defaultProps = {
     style: { fill: 'red', fillOpacity: .1 }
 };
-exports.default = SparklinesNormalBand;
+exports.default = MicrochartsNormalBand;
 
 /***/ }),
 /* 29 */

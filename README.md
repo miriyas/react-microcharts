@@ -1,8 +1,8 @@
-# Simple and Lightweight Sparklines component for React
+# Simple and Lightweight Microcharts component for React
 
-forked from https://github.com/borisyankov/react-sparklines
+forked from https://github.com/borisyankov/react-microcharts
 
-Live demos and docs: [miriyas.github.io/react-sparklines/](https://miriyas.github.io/react-microcharts/)
+Live demos and docs: [miriyas.github.io/react-microcharts/](https://miriyas.github.io/react-microcharts/)
 
 ![](https://miriyas.github.io/react-microcharts/img/dynamic.gif)
 
@@ -23,18 +23,18 @@ http://localhost:8080
 
 ## Use
 
-Import the Sparklines components that you need; for example to generate a simple chart:
+Import the Microcharts components that you need; for example to generate a simple chart:
 
 ![](https://miriyas.github.io/react-microcharts/img/basic.png)
 
 ```
 import React from 'react';
-import { Sparklines } from 'react-microcharts';
+import { Microcharts } from 'react-microcharts';
 ...
-<Sparklines data={[5, 10, 5, 20, 8, 15]} limit={5} width={100} height={20} margin={5} />
+<Microcharts data={[5, 10, 5, 20, 8, 15]} limit={5} width={100} height={20} margin={5} />
 ```
 
-Sparklines component is a container with the following properties:
+Microcharts component is a container with the following properties:
 
 data - the data set used to build the sparkline
 
@@ -57,11 +57,11 @@ min, max - optional, bound the chart
 
 ```
 import React from 'react';
-import { Sparklines, SparklinesLine } from 'react-sparklines';
+import { Microcharts, MicrochartsLine } from 'react-microcharts';
 ...
-<Sparklines data={[5, 10, 5, 20]}>
-  <SparklinesLine color="blue" />
-</Sparklines>
+<Microcharts data={[5, 10, 5, 20]}>
+  <MicrochartsLine color="blue" />
+</Microcharts>
 ```
 
 #### Bars
@@ -71,11 +71,11 @@ import { Sparklines, SparklinesLine } from 'react-sparklines';
 
 ```
 import React from 'react';
-import { Sparklines, SparklinesBars } from 'react-sparklines';
+import { Microcharts, MicrochartsBars } from 'react-microcharts';
 ...
-<Sparklines data={[5, 10, 5, 20]}>
-  <SparklinesBars />
-</Sparklines>
+<Microcharts data={[5, 10, 5, 20]}>
+  <MicrochartsBars />
+</Microcharts>
 ```
 
 #### Spots
@@ -85,12 +85,12 @@ import { Sparklines, SparklinesBars } from 'react-sparklines';
 
 ```
 import React from 'react';
-import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
+import { Microcharts, MicrochartsLine, MicrochartsSpots } from 'react-microcharts';
 ...
-<Sparklines data={sampleData}>
-    <SparklinesLine style={{ fill: "none" }} />
-    <SparklinesSpots />
-</Sparklines>
+<Microcharts data={sampleData}>
+    <MicrochartsLine style={{ fill: "none" }} />
+    <MicrochartsSpots />
+</Microcharts>
 ```
 
 #### Reference Line
@@ -100,12 +100,12 @@ import { Sparklines, SparklinesLine, SparklinesSpots } from 'react-sparklines';
 
 ```
 import React from 'react';
-import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-sparklines';
+import { Microcharts, MicrochartsLine, MicrochartsReferenceLine } from 'react-microcharts';
 ...
-<Sparklines data={sampleData}>
-    <SparklinesLine />
-    <SparklinesReferenceLine type="mean" />
-</Sparklines>
+<Microcharts data={sampleData}>
+    <MicrochartsLine />
+    <MicrochartsReferenceLine type="mean" />
+</Microcharts>
 ```
 
 #### Normal Band
@@ -115,10 +115,10 @@ import { Sparklines, SparklinesLine, SparklinesReferenceLine } from 'react-spark
 
 ```
 import React from 'react';
-import { Sparklines, SparklinesLine, SparklinesNormalBand } from 'react-sparklines';
+import { Microcharts, MicrochartsLine, MicrochartsNormalBand } from 'react-microcharts';
 ...
-<Sparklines data={sampleData}>
-    <SparklinesLine style={{ fill: "none" }}/>
-    <SparklinesNormalBand />
-</Sparklines>
+<Microcharts data={sampleData}>
+    <MicrochartsLine style={{ fill: "none" }}/>
+    <MicrochartsNormalBand />
+</Microcharts>
 ```

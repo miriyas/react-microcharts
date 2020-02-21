@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Sparklines, SparklinesBars, SparklinesLine, SparklinesCurve,  SparklinesNormalBand, SparklinesReferenceLine, SparklinesSpots } from '../src/Sparklines';
+import { Microcharts, MicrochartsBars, MicrochartsLine, MicrochartsCurve,  MicrochartsNormalBand, MicrochartsReferenceLine, MicrochartsSpots } from '../src/Microcharts';
 
 function boxMullerRandom () {
     let phase = false,
@@ -31,84 +31,84 @@ const sampleData = randomData(30);
 const sampleData100 = randomData(100);
 
 const Header = () =>
-    <Sparklines data={sampleData} width={300} height={50}>
-        <SparklinesLine style={{ stroke: "white", fill: "none" }} />
-        <SparklinesReferenceLine style={{ stroke: 'white', strokeOpacity: .75, strokeDasharray: '2, 2' }} />
-    </Sparklines>
+    <Microcharts data={sampleData} width={300} height={50}>
+        <MicrochartsLine style={{ stroke: "white", fill: "none" }} />
+        <MicrochartsReferenceLine style={{ stroke: 'white', strokeOpacity: .75, strokeDasharray: '2, 2' }} />
+    </Microcharts>
 
 const Simple = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine />
+    </Microcharts>
 
 const SimpleCurve = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesCurve />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsCurve />
+    </Microcharts>
 
 const Customizable1 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#1c8cdc" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#1c8cdc" />
+    </Microcharts>
 
 const Customizable2 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#fa7e17" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#fa7e17" />
+    </Microcharts>
 
 const Customizable3 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#ea485c" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#ea485c" />
+    </Microcharts>
 
 const Customizable4 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#56b45d" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#56b45d" />
+    </Microcharts>
 
 const Customizable5 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#8e44af" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#8e44af" />
+    </Microcharts>
 
 const Customizable6 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#253e56" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#253e56" />
+    </Microcharts>
 
 const Bounds1 = () =>
-    <Sparklines data={sampleData} max={0.5}>
-        <SparklinesLine />
-    </Sparklines>
+    <Microcharts data={sampleData} max={0.5}>
+        <MicrochartsLine />
+    </Microcharts>
 
 const Spots1 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine style={{ fill: "none" }} />
-        <SparklinesSpots />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine style={{ fill: "none" }} />
+        <MicrochartsSpots />
+    </Microcharts>
 
 const Spots2 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine color="#56b45d" />
-        <SparklinesSpots style={{ fill: "#56b45d" }} />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine color="#56b45d" />
+        <MicrochartsSpots style={{ fill: "#56b45d" }} />
+    </Microcharts>
 
 const Spots3 = () =>
-    <Sparklines data={sampleData} margin={6}>
-        <SparklinesLine style={{ strokeWidth: 3, stroke: "#336aff", fill: "none" }} />
-        <SparklinesSpots size={4} style={{ stroke: "#336aff", strokeWidth: 3, fill: "white" }} />
-    </Sparklines>
+    <Microcharts data={sampleData} margin={6}>
+        <MicrochartsLine style={{ strokeWidth: 3, stroke: "#336aff", fill: "none" }} />
+        <MicrochartsSpots size={4} style={{ stroke: "#336aff", strokeWidth: 3, fill: "white" }} />
+    </Microcharts>
 
 const Bars1 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesBars style={{ fill: "#41c3f9" }} />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsBars style={{ fill: "#41c3f9" }} />
+    </Microcharts>
 
 const Bars2 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesBars style={{ stroke: "white", fill: "#41c3f9", fillOpacity: ".25" }} />
-        <SparklinesLine style={{ stroke: "#41c3f9", fill: "none" }} />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsBars style={{ stroke: "white", fill: "#41c3f9", fillOpacity: ".25" }} />
+        <MicrochartsLine style={{ stroke: "#41c3f9", fill: "none" }} />
+    </Microcharts>
 
 class Dynamic1 extends Component {
 
@@ -123,10 +123,10 @@ class Dynamic1 extends Component {
 
     render() {
         return (
-            <Sparklines data={this.state.data} limit={20}>
-                <SparklinesLine color="#1c8cdc" />
-                <SparklinesSpots />
-            </Sparklines>
+            <Microcharts data={this.state.data} limit={20}>
+                <MicrochartsLine color="#1c8cdc" />
+                <MicrochartsSpots />
+            </Microcharts>
         );
     }
 }
@@ -144,10 +144,10 @@ class Dynamic2 extends Component {
 
     render() {
         return (
-            <Sparklines data={this.state.data} limit={20}>
-                <SparklinesBars style={{ fill: "#41c3f9", fillOpacity: ".25" }} />
-                <SparklinesLine style={{ stroke: "#41c3f9", fill: "none" }} />
-            </Sparklines>
+            <Microcharts data={this.state.data} limit={20}>
+                <MicrochartsBars style={{ fill: "#41c3f9", fillOpacity: ".25" }} />
+                <MicrochartsLine style={{ stroke: "#41c3f9", fill: "none" }} />
+            </Microcharts>
         );
     }
 }
@@ -166,9 +166,9 @@ class Dynamic3 extends Component {
 
     render() {
         return (
-            <Sparklines data={this.state.data} limit={20}>
-                <SparklinesLine style={{ stroke: "none", fill: "#8e44af", fillOpacity: "1" }} />
-            </Sparklines>
+            <Microcharts data={this.state.data} limit={20}>
+                <MicrochartsLine style={{ stroke: "none", fill: "#8e44af", fillOpacity: "1" }} />
+            </Microcharts>
         );
     }
 }
@@ -187,113 +187,113 @@ class Dynamic4 extends React.Component {
 
     render() {
         return (
-            <Sparklines data={this.state.data} limit={10} >
-                <SparklinesBars color="#0a83d8" />
-            </Sparklines>
+            <Microcharts data={this.state.data} limit={10} >
+                <MicrochartsBars color="#0a83d8" />
+            </Microcharts>
         );
     }
 }
 
 const ReferenceLine1 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine />
-        <SparklinesReferenceLine type="max" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine />
+        <MicrochartsReferenceLine type="max" />
+    </Microcharts>
 
 const ReferenceLine2 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine />
-        <SparklinesReferenceLine type="min" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine />
+        <MicrochartsReferenceLine type="min" />
+    </Microcharts>
 
 const ReferenceLine3 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine />
-        <SparklinesReferenceLine type="mean" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine />
+        <MicrochartsReferenceLine type="mean" />
+    </Microcharts>
 
 const ReferenceLine4 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine />
-        <SparklinesReferenceLine type="avg" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine />
+        <MicrochartsReferenceLine type="avg" />
+    </Microcharts>
 
 const ReferenceLine5 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine />
-        <SparklinesReferenceLine type="median" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine />
+        <MicrochartsReferenceLine type="median" />
+    </Microcharts>
 
 const ReferenceLine6 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesBars style={{ fill: 'slategray', fillOpacity: ".5" }} />
-        <SparklinesReferenceLine />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsBars style={{ fill: 'slategray', fillOpacity: ".5" }} />
+        <MicrochartsReferenceLine />
+    </Microcharts>
 
 const NormalBand1 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine style={{ fill: "none" }} />
-        <SparklinesNormalBand />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine style={{ fill: "none" }} />
+        <MicrochartsNormalBand />
+    </Microcharts>
 
 const NormalBand2 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine style={{ fill: "none" }}/>
-        <SparklinesNormalBand />
-        <SparklinesReferenceLine type="mean" />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine style={{ fill: "none" }}/>
+        <MicrochartsNormalBand />
+        <MicrochartsReferenceLine type="mean" />
+    </Microcharts>
 
 const RealWorld1 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesLine style={{ strokeWidth: 3, stroke: "#336aff", fill: "none" }} />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsLine style={{ strokeWidth: 3, stroke: "#336aff", fill: "none" }} />
+    </Microcharts>
 
 const RealWorld2 = () =>
-    <Sparklines data={sampleData100} svgWidth={200}>
-        <SparklinesLine style={{ stroke: "#2991c8", fill: "none"}} />
-        <SparklinesSpots />
-        <SparklinesNormalBand style={{ fill: "#2991c8", fillOpacity: .1 }} />
-    </Sparklines>
+    <Microcharts data={sampleData100} svgWidth={200}>
+        <MicrochartsLine style={{ stroke: "#2991c8", fill: "none"}} />
+        <MicrochartsSpots />
+        <MicrochartsNormalBand style={{ fill: "#2991c8", fillOpacity: .1 }} />
+    </Microcharts>
 
 const RealWorld3 = () =>
-    <Sparklines data={sampleData100}>
-        <SparklinesLine style={{ stroke: "black", fill: "none" }} />
-        <SparklinesSpots style={{ fill: "orange" }} />
-    </Sparklines>
+    <Microcharts data={sampleData100}>
+        <MicrochartsLine style={{ stroke: "black", fill: "none" }} />
+        <MicrochartsSpots style={{ fill: "orange" }} />
+    </Microcharts>
 
 const RealWorld4 = () =>
-    <Sparklines data={sampleData}>
-        <SparklinesBars style={{ stroke: "white", strokeWidth: "1", fill: "#40c0f5" }} />
-    </Sparklines>
+    <Microcharts data={sampleData}>
+        <MicrochartsBars style={{ stroke: "white", strokeWidth: "1", fill: "#40c0f5" }} />
+    </Microcharts>
 
 const RealWorld5 = () =>
-    <Sparklines data={sampleData} height={80}>
-        <SparklinesLine style={{ stroke: "#8ed53f", strokeWidth: "1", fill: "none" }} />
-    </Sparklines>
+    <Microcharts data={sampleData} height={80}>
+        <MicrochartsLine style={{ stroke: "#8ed53f", strokeWidth: "1", fill: "none" }} />
+    </Microcharts>
 
 const RealWorld6 = () =>
-    <Sparklines data={sampleData} height={80}>
-        <SparklinesLine style={{ stroke: "#d1192e", strokeWidth: "1", fill: "none" }} />
-    </Sparklines>
+    <Microcharts data={sampleData} height={80}>
+        <MicrochartsLine style={{ stroke: "#d1192e", strokeWidth: "1", fill: "none" }} />
+    </Microcharts>
 
 const RealWorld7 = () =>
-    <Sparklines data={sampleData} height={40}>
-        <SparklinesLine style={{ stroke: "#559500", fill: "#8fc638", fillOpacity: "1" }} />
-    </Sparklines>
+    <Microcharts data={sampleData} height={40}>
+        <MicrochartsLine style={{ stroke: "#559500", fill: "#8fc638", fillOpacity: "1" }} />
+    </Microcharts>
 
 const RealWorld8 = () =>
-    <Sparklines data={sampleData} style={{background: "#272727"}} margin={10} height={40}>
-        <SparklinesLine style={{ stroke: "none", fill: "#d2673a", fillOpacity: ".5" }} />
-    </Sparklines>
+    <Microcharts data={sampleData} style={{background: "#272727"}} margin={10} height={40}>
+        <MicrochartsLine style={{ stroke: "none", fill: "#d2673a", fillOpacity: ".5" }} />
+    </Microcharts>
 
 const RealWorld9 = () =>
-    <Sparklines data={sampleData} style={{background: "#00bdcc"}} margin={10} height={40}>
-        <SparklinesLine style={{ stroke: "white", fill: "none" }} />
-        <SparklinesReferenceLine style={{ stroke: 'white', strokeOpacity: .75, strokeDasharray: '2, 2' }} />
-    </Sparklines>
+    <Microcharts data={sampleData} style={{background: "#00bdcc"}} margin={10} height={40}>
+        <MicrochartsLine style={{ stroke: "white", fill: "none" }} />
+        <MicrochartsReferenceLine style={{ stroke: 'white', strokeOpacity: .75, strokeDasharray: '2, 2' }} />
+    </Microcharts>
 
 const demos = {
-    'headersparklines': Header,
+    'headerMicrocharts': Header,
     'simple': Simple,
     'simpleCurve': SimpleCurve,
     'customizable1': Customizable1,
