@@ -1,1 +1,1 @@
-module.exports = require('./src/Microcharts.js');
+module.exports = require('./src/index.tsx')
