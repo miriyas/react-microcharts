@@ -11,7 +11,7 @@ module.exports = {
         path: path.join(__dirname, 'build'),
         publicPath: '/',
         filename: '[name].js',
-        library: 'ReactSparklines',
+        library: 'ReactMicrocharts',
         libraryTarget: 'umd'
     },
     externals: {
